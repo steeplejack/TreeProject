@@ -58,3 +58,9 @@ modelSwitchD := [[1]]: '''.format(simulation_name, experiment_directory, simulat
             output.close()
     return alfsim_parameter_string
 
+
+def run_ALF(parameters):
+    import os
+    os.system("alfsim {0}".format(parameters))
+
+
