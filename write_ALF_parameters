@@ -61,6 +61,9 @@ modelSwitchD := [[1]]: '''.format(simulation_name, experiment_directory, simulat
 
 def run_ALF(parameters):
     import os
-    os.system("alfsim {0}".format(parameters))
+    if os.path.isfile(parameters):
+        os.system("alfsim {0}".format(parameters))
+    else: print "Can't file file '{0}'".format(parameters)
 
-
+write_ALF_parameters('class1','simulated_genes','class1','100','100',20,True,'class1-params.drw')
+run_ALF('class1-params')
