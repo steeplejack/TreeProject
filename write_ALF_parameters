@@ -16,7 +16,7 @@ uuid := '';
 mname := {0};
 
 # directories for file storage - you may want to change these
-wdir := './{1}/{2}/';
+wdir := './{1}/{2}';
 dbdir := 'DB/';
 dbAncdir := 'DBancestral/';
 
@@ -65,5 +65,5 @@ def run_ALF(parameters):
         os.system("alfsim {0}".format(parameters))
     else: print "Can't file file '{0}'".format(parameters)
 
-write_ALF_parameters('class1','simulated_genes','class1','100','100',20,True,'class1-params.drw')
-run_ALF('class1-params')
+write_ALF_parameters('class3','simulated_genes','','100','100',20,True,'class3-params.drw')
+run_ALF('class3-params.drw')
