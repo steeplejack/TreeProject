@@ -50,7 +50,7 @@ modelSwitchD := [[1]]: '''.format(simulation_name, experiment_directory, simulat
         alfsim_parameter_string = alfsim_parameter_string.replace("indelModels := [IndelModel(0.0001, ZIPF, [1.821], 10)];\n","")
     if output_filename:
         if os.path.isfile(output_filename):
-            write=raw_input("Output file {0} exists, overwrite (y/n)?: ".format(output_filename))
+            write=raw_input("Output file '{0}' exists, overwrite (y/n)?: ".format(output_filename))
         else: write = 'y'
         if write == 'y':
             output = open(output_filename, 'w')
